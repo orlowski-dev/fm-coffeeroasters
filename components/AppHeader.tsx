@@ -17,19 +17,28 @@ const AppHeader = () => {
       </Link>
       <MobileNav />
       <nav className="hidden md:block">
-        <ul className="flex gap-7 text-grey">
+        <ul className="flex gap-7 text-grey select-none">
           <li>
-            <Link href="/" className="font-berlow text-nav-menu uppercase">
+            <Link
+              href="/"
+              className="font-berlow text-nav-menu uppercase hover:text-dark-grey-blue transition-colors"
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link href="/" className="font-berlow text-nav-menu uppercase">
+            <Link
+              href="/"
+              className="font-berlow text-nav-menu uppercase hover:text-dark-grey-blue transition-colors"
+            >
               About Us
             </Link>
           </li>
           <li>
-            <Link href="/" className="font-berlow text-nav-menu uppercase">
+            <Link
+              href="/"
+              className="font-berlow text-nav-menu uppercase hover:text-dark-grey-blue transition-colors"
+            >
               Create your plan
             </Link>
           </li>

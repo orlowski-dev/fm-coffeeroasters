@@ -4,7 +4,7 @@ import { default as piccollo } from "@/assets/images/desktop/image-piccollo.png"
 import { default as danche } from "@/assets/images/desktop/image-danche.png";
 import { CollectionCard } from "./Cards";
 
-const cards: ICardProps[] = [
+const cards: ICardWIthImageProps[] = [
   {
     title: "Grand Espresso",
     text: "Light and flavorful blend with cocoa and black pepper for an intense experience",

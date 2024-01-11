@@ -3,7 +3,7 @@ import { default as gift } from "@/assets/icons/icon-gift.svg";
 import { default as truck } from "@/assets/icons/icon-truck.svg";
 import { FeatureCard } from "./Cards";
 
-const features: ICardProps[] = [
+const features: ICardWIthImageProps[] = [
   {
     title: "Best quality",
     text: "Discover an endless variety of the world’s best artisan coffee from each of our roasters.",

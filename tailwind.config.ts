@@ -11,8 +11,8 @@ const config: Config = {
       height: {
         "mobile-menu": "calc(100vh - 4.125rem)",
       },
-      gridTemplateRows: {
-        "row-collection-card": "auto auto",
+      spacing: {
+        "step-line": "calc(50% - 1px)",
       },
       colors: {
         "dark-cyan": "#0e8784",

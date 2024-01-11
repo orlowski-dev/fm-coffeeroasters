@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Barlow, Fraunces } from "next/font/google";
 import AppHeader from "@/components/AppHeader";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const barlow = Barlow({
   subsets: ["latin-ext"],
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className={`${barlow.variable} ${fraunces.variable}`}>
         <AppHeader />
         {children}
+        <Footer />
       </body>
     </html>
   );

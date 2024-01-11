@@ -1,6 +1,10 @@
 import Image from "next/image";
 
-export const CollectionCard = ({ title, text, imageSrc }: ICardProps) => {
+export const CollectionCard = ({
+  title,
+  text,
+  imageSrc,
+}: ICardWIthImageProps) => {
   return (
     <article className="text-center md:text-left lg:text-center grid md:grid-cols-2 items-center justify-center lg:grid-cols-1 gap-10">
       <Image
@@ -20,7 +24,7 @@ export const CollectionCard = ({ title, text, imageSrc }: ICardProps) => {
   );
 };
 
-export const FeatureCard = ({ title, text, imageSrc }: ICardProps) => {
+export const FeatureCard = ({ title, text, imageSrc }: ICardWIthImageProps) => {
   return (
     <article className="flex flex-col md:flex-row lg:flex-col md:items-center md:gap-14 px-6 md:px-12 pt-16 pb-14 bg-dark-cyan text-center md:text-left lg:text-center text-white mx-6 lg:mx-0 rounded-lg">
       <Image
@@ -36,6 +40,20 @@ export const FeatureCard = ({ title, text, imageSrc }: ICardProps) => {
         </h3>
         <p className="font-barlow text-body opacity-80">{text}</p>
       </div>
+    </article>
+  );
+};
+
+export const HIWCard = ({ num, title, text }: ICardWithNumsProps) => {
+  return (
+    <article className="grid gap-6 text-center p-6 md:text-left md:gap-9">
+      <p className="font-fraunces text-h1 text-pale-orange">{num}</p>
+      <h3 className="font-fraunces text-[1.75rem] text-dark-grey-blue">
+        {title}
+      </h3>
+      <p className="font-barlow text-body text-dark-grey-blue opacity-80 max-w-[400px] mx-auto">
+        {text}
+      </p>
     </article>
   );
 };
