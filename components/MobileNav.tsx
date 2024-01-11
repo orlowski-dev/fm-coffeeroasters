@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { default as menuIcon } from "@/assets/icons/icon-hamburger.svg";
 import { default as closeMenuIcon } from "@/assets/icons/icon-close.svg";
@@ -47,6 +47,27 @@ const listVariants = {
 
 const MobileNav = () => {
   const [menuVisible, setMenuVisible] = useState(false);
+
+  useLayoutEffect(() => {
+    const onScreenResize = () => {
+      console.log("resize");
+      if (window.innerWidth > 767) {
+        setMenuVisible(false);
+      }
+    };
+    window.addEventListener("resize", onScreenResize);
+
+    return () => window.removeEventListener("resize", onScreenResize);
+  }, []);
+
+  useEffect(() => {
+    if (menuVisible) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [menuVisible]);
+
   return (
     <nav className="flex items-center md:hidden">
       <button onClick={() => setMenuVisible((prev) => !prev)}>
@@ -68,6 +89,7 @@ const MobileNav = () => {
           variants={listVariants}
           animate={menuVisible ? "open" : "closed"}
           initial={{ y: "-100px" }}
+          onClick={() => setMenuVisible(false)}
         >
           <li>
             <Link href="/" className="font-fraunces text-h4">
