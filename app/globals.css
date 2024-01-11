@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hero-index-image {
+  background-image: url("../assets/images/mobile/image-hero-coffeepress.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-index-image {
+    background-image: url("../assets/images/tablet/image-hero-coffeepress.jpg");
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-index-image {
+    background-image: url("../assets/images/desktop/image-hero-coffeepress.jpg");
+  }
+}

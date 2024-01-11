@@ -13,6 +13,8 @@ const config: Config = {
       },
       colors: {
         "dark-cyan": "#0e8784",
+        "light-cyan": "#66D2CF",
+        "graeyish-cyan": "#E2DEDB",
         "dark-grey-blue": "#333D4B",
         "pale-orange": "#FDD6BA",
         "light-cream": "#FEFCF7",
@@ -38,7 +40,7 @@ const config: Config = {
           },
         ],
         h2: [
-          "2.5rem",
+          "3rem",
           {
             lineHeight: "3rem",
             fontWeight: 700,

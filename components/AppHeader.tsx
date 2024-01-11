@@ -4,7 +4,7 @@ import MobileNav from "./MobileNav";
 
 const AppHeader = () => {
   return (
-    <header className="max-w-[1280px] mx-auto  bg-white p-6 flex items-center justify-between sticky z-20">
+    <header className="max-w-[1280px] mx-auto  bg-white p-6 flex items-center justify-between sticky top-0 left-0 z-20">
       <Link href="/">
         <Image
           src="/brand/logo.svg"
