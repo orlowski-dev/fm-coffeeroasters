@@ -11,11 +11,15 @@ const config: Config = {
       height: {
         "mobile-menu": "calc(100vh - 4.125rem)",
       },
+      gridTemplateRows: {
+        "row-collection-card": "auto auto",
+      },
       colors: {
         "dark-cyan": "#0e8784",
         "light-cyan": "#66D2CF",
         "graeyish-cyan": "#E2DEDB",
         "dark-grey-blue": "#333D4B",
+        "grey-blue": "#2C343E",
         "pale-orange": "#FDD6BA",
         "light-cream": "#FEFCF7",
         grey: "#83888F",
