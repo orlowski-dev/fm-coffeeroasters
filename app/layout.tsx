@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Barlow, Fraunces } from "next/font/google";
+import AppHeader from "@/components/AppHeader";
 import "./globals.css";
 
 const barlow = Barlow({
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${barlow.variable} ${fraunces.variable}`}>
+        <AppHeader />
         {children}
       </body>
     </html>

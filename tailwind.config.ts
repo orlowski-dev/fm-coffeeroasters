@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      height: {
+        "mobile-menu": "calc(100vh - 4.125rem)",
+      },
       colors: {
         "dark-cyan": "#0e8784",
         "dark-grey-blue": "#333D4B",
