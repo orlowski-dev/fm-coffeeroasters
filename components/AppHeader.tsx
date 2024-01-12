@@ -28,7 +28,7 @@ const AppHeader = () => {
           </li>
           <li>
             <Link
-              href="/"
+              href="/about-us"
               className="font-berlow text-nav-menu uppercase hover:text-dark-grey-blue transition-colors"
             >
               About Us
@@ -36,7 +36,7 @@ const AppHeader = () => {
           </li>
           <li>
             <Link
-              href="/"
+              href="/create-your-plan"
               className="font-berlow text-nav-menu uppercase hover:text-dark-grey-blue transition-colors"
             >
               Create your plan

@@ -14,6 +14,10 @@ const config: Config = {
       spacing: {
         "step-line": "calc(50% - 1px)",
       },
+      gridTemplateColumns: {
+        "commitment-md": "281px auto",
+        "commitment-lg": "445px auto",
+      },
       colors: {
         "dark-cyan": "#0e8784",
         "light-cyan": "#66D2CF",

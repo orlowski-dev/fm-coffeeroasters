@@ -57,3 +57,31 @@ export const HIWCard = ({ num, title, text }: ICardWithNumsProps) => {
     </article>
   );
 };
+
+export const HeadquarterCard = ({
+  country,
+  contact,
+  icon,
+}: IHeadquartersCardProps) => {
+  return (
+    <article className="p-6 text-center md:text-left">
+      <Image
+        src={icon.src}
+        alt="icon"
+        width={icon.width}
+        height={icon.height}
+        className="mx-auto md:mx-0"
+      />
+      <address className="mt-11">
+        <h2 className="font-fraunces text-h3 text-dark-grey-blue mb-8 md:text-h4">
+          {country}
+        </h2>
+        {contact.map((elem, index: number) => (
+          <p key={index} className="font-barlow text-grey mb-1">
+            {elem}
+          </p>
+        ))}
+      </address>
+    </article>
+  );
+};

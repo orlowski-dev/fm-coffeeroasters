@@ -97,12 +97,12 @@ const MobileNav = () => {
             </Link>
           </li>
           <li>
-            <Link href="/" className="font-fraunces text-h4">
+            <Link href="/about-us" className="font-fraunces text-h4">
               About Us
             </Link>
           </li>
           <li>
-            <Link href="/" className="font-fraunces text-h4">
+            <Link href="/create-your plan" className="font-fraunces text-h4">
               Create Your Plan
             </Link>
           </li>

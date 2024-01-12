@@ -26,7 +26,7 @@ const Footer = () => {
           </li>
           <li>
             <Link
-              href="/"
+              href="/about-us"
               className="font-barlow text-nav-menu text-grey opacity-80 uppercase hover:text-white hover:opacity-100 transition-colors"
             >
               About us
@@ -34,7 +34,7 @@ const Footer = () => {
           </li>
           <li>
             <Link
-              href="/"
+              href="/create-your-plan"
               className="font-barlow text-nav-menu text-grey opacity-80 uppercase hover:text-white hover:opacity-100 transition-colors"
             >
               Create your plan

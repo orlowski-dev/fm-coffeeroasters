@@ -9,3 +9,13 @@ interface ICardWithNumsProps {
   title: string;
   text: string;
 }
+
+interface IHeadquartersCardProps {
+  country: string;
+  contact: string[];
+  icon: {
+    src: string;
+    width: number;
+    height: number;
+  };
+}
