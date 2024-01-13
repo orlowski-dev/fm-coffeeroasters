@@ -44,16 +44,32 @@ export const FeatureCard = ({ title, text, imageSrc }: ICardWIthImageProps) => {
   );
 };
 
-export const HIWCard = ({ num, title, text }: ICardWithNumsProps) => {
+export const HIWCard = ({
+  num,
+  title,
+  text,
+  darkVariant,
+  noButton,
+}: ICardWithNumsProps) => {
   return (
     <article className="grid gap-6 text-center p-6 md:text-left md:gap-9">
       <p className="font-fraunces text-h1 text-pale-orange">{num}</p>
-      <h3 className="font-fraunces text-[1.75rem] text-dark-grey-blue">
+      <h3
+        className={`font-fraunces text-[1.75rem] ${
+          darkVariant ? "text-white" : "text-dark-grey-blue"
+        }`}
+      >
         {title}
       </h3>
-      <p className="font-barlow text-body text-dark-grey-blue opacity-80 max-w-[400px] mx-auto">
-        {text}
-      </p>
+      {!noButton ? (
+        <p
+          className={`font-barlow text-body opacity-80 max-w-[400px] mx-auto md:mx-0 ${
+            darkVariant ? "text-white" : "text-dark-grey-blue"
+          }`}
+        >
+          {text}
+        </p>
+      ) : undefined}
     </article>
   );
 };

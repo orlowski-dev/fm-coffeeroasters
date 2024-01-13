@@ -13,7 +13,9 @@ const HomePage = () => {
         text="Start your mornings with the world’s best coffees. Try our expertly
         curated artisan coffees from our best roasters delivered directly to
         your door, at your schedule."
-        actionLink={<LinkButton href="/">Create your plan</LinkButton>}
+        actionLink={
+          <LinkButton href="/create-your-plan">Create your plan</LinkButton>
+        }
       />
       <CollectionSection />
       <WhyChooseUsSection />

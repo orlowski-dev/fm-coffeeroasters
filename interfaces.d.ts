@@ -8,6 +8,8 @@ interface ICardWithNumsProps {
   num: string;
   title: string;
   text: string;
+  darkVariant?: boolean;
+  noButton?: boolean;
 }
 
 interface IHeadquartersCardProps {
@@ -18,4 +20,12 @@ interface IHeadquartersCardProps {
     width: number;
     height: number;
   };
+}
+
+interface IFormInputs {
+  preferences?: string;
+  beanType?: string;
+  quantity?: string;
+  grindOption?: string;
+  deliveries?: string;
 }

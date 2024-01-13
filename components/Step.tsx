@@ -1,14 +1,27 @@
-import Image from "next/image";
-import { default as ovalIcon } from "@/assets/icons/icon-oval.svg";
-
 interface IProps {
   line?: boolean;
+  dark?: boolean;
 }
 
-const Step = ({ line }: IProps) => {
+const Step = ({ line, dark }: IProps) => {
   return (
     <div className="relative px-6">
-      <Image src={ovalIcon.src} alt="oval icon" width={30} height={30} />
+      <svg
+        width="31"
+        height="31"
+        viewBox="0 0 31 31"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="15.5"
+          cy="15.5"
+          r="14.5"
+          stroke="#0E8784"
+          strokeWidth="2"
+          className={dark ? "fill-[#333D4B]" : "fill-[#ffffff]"}
+        />
+      </svg>
       {line ? (
         <span className="absolute -z-10 w-full h-[2px] top-step-line bg-pale-orange"></span>
       ) : undefined}

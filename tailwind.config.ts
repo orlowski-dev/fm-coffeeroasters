@@ -17,6 +17,7 @@ const config: Config = {
       gridTemplateColumns: {
         "commitment-md": "281px auto",
         "commitment-lg": "445px auto",
+        "create-form": "255px auto",
       },
       colors: {
         "dark-cyan": "#0e8784",

@@ -16,6 +16,10 @@
   background-image: url("../assets/images/mobile/image-hero-whitecup.jpg");
 }
 
+.hero-create-plan {
+  background-image: url("../assets/images/mobile/image-hero-blackcup.jpg");
+}
+
 .quality-image {
   background: url("../assets/images/mobile/image-quality.jpg");
   background-size: 278px 156px;
@@ -50,6 +54,9 @@
     top: calc(-160px);
     left: calc(50% - 287px);
   }
+  .hero-create-plan {
+    background-image: url("../assets/images/tablet/image-hero-blackcup.jpg");
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -70,4 +77,11 @@
     top: -80px;
     left: calc(100% - 445px - 80px);
   }
+  .hero-create-plan {
+    background-image: url("../assets/images/desktop/image-hero-blackcup.jpg");
+  }
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
 }
