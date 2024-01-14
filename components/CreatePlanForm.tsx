@@ -5,6 +5,7 @@ import OrderSummary from "./OrderSummary";
 import { Button } from "./Button";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useCallback, useReducer, useState } from "react";
+import Modal from "./Modal";
 
 interface IReducerStates {
   preferences: boolean;
@@ -14,14 +15,7 @@ interface IReducerStates {
   deliveries: boolean;
 }
 
-// type TReducerActions = {
-//   // type: "preferences" | "beanType" | "quantity" | "grindOption" | "deliveries";
-//   type: string;
-//   payload?: boolean;
-// };
-
 type TReducerActions = {
-  // type: "preferences" | "beanType" | "quantity" | "grindOption" | "deliveries";
   type: string;
   payload?: boolean;
 };
@@ -68,6 +62,7 @@ const accordionsNav: { title: string; name: string }[] = [
 
 const CreatePlanForm = () => {
   const [isCapsuleType, setIsCapsuleType] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
   const [formData, setFormData] = useState<IFormInputs | null>(null);
   const [accordionsStates, accordionsDispatch] = useReducer(reducer, {
     preferences: false,
@@ -77,12 +72,16 @@ const CreatePlanForm = () => {
     deliveries: false,
   });
   const { register, handleSubmit, watch } = useForm<IFormInputs>();
-  const onSubmit: SubmitHandler<IFormInputs> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<IFormInputs> = () => {
+    setModalVisible(true);
   };
 
   const accordionCallback = useCallback((name: string) => {
     accordionsDispatch({ type: name });
+  }, []);
+
+  const modalButtonClickCallback = useCallback(() => {
+    alert("Callback");
   }, []);
 
   watch((data) => {
@@ -243,6 +242,13 @@ const CreatePlanForm = () => {
           </div>
         </form>
       </div>
+      {modalVisible ? (
+        <Modal
+          summaryData={formData}
+          buttonText="Checkout - $14.00 / mo"
+          buttonClickCallback={modalButtonClickCallback}
+        />
+      ) : undefined}
     </div>
   );
 };
